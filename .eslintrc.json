@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    "rc-leaflet"
+  ],
+  "extends": [
+    "plugin:rc-leaflet/ts-prod",
+    "plugin:rc-leaflet/react-prod"
+  ]
+}
