@@ -318,6 +318,7 @@ export default class Drawing extends Component<Props, State> {
     if (this.isControlled) {
       const { layers = [], circles = [], onLayerChange, onCircleChange } = this.props
       const circle = L.circle(layer.getLatLng(), layer.getRadius())
+      L.Util.setOptions(circle, layer.options)
       layer.setLatLng(center)
       layer.setRadius(radius)
       onLayerChange && onLayerChange(circle, index, layers.map((l, i) => i === index ? circle : l))
@@ -329,6 +330,7 @@ export default class Drawing extends Component<Props, State> {
     if (this.isControlled) {
       const { layers = [], polylines = [], onLayerChange, onPolylineChange } = this.props
       const polyline = L.polyline(layer.getLatLngs() as any)
+      L.Util.setOptions(polyline, layer.options)
       layer.setLatLngs(points)
       onLayerChange && onLayerChange(polyline, index, layers.map((l, i) => i === index ? polyline : l))
       onPolylineChange && onPolylineChange(polyline, index, polylines.map((p, i) => i === index ? polyline : p))
@@ -339,6 +341,7 @@ export default class Drawing extends Component<Props, State> {
     if (this.isControlled) {
       const { layers = [], polygons = [], onLayerChange, onPolygonChange } = this.props
       const polygon = L.polygon(layer.getLatLngs())
+      L.Util.setOptions(polygon, layer.options)
       layer.setLatLngs(points)
       onLayerChange && onLayerChange(polygon, index, layers.map((l, i) => i === index ? polygon : l))
       onPolygonChange && onPolygonChange(polygon, index, polygons.map((p, i) => i === index ? polygon : p))
@@ -349,6 +352,7 @@ export default class Drawing extends Component<Props, State> {
     if (this.isControlled) {
       const { layers = [], rectangles = [], onLayerChange, onRectangleChange } = this.props
       const rectangle = L.rectangle(layer.getBounds())
+      L.Util.setOptions(rectangle, layer.options)
       layer.setLatLngs(points)
       onLayerChange && onLayerChange(rectangle, index, layers.map((l, i) => i === index ? rectangle : l))
       onRectangleChange && onRectangleChange(rectangle, index, rectangles.map((p, i) => i === index ? rectangle : p))
@@ -411,10 +415,11 @@ export default class Drawing extends Component<Props, State> {
     layer.on('dragstart', e => {
       pos = layer.getLatLng()
     })
-    layer.on('drag', () => {
+    layer.on('dragend', () => {
       if (this.isControlled) {
         const { layers = [], points = [], onLayerChange, onPointChange } = this.props
         const point = L.marker(layer.getLatLng())
+        L.Util.setOptions(point, layer.options)
         layer.setLatLng(pos)
         onLayerChange && onLayerChange(point, index, layers.map((l, i) => i === index ? point : l))
         onPointChange && onPointChange(point, index, points.map((p, i) => i === index ? point : p))
