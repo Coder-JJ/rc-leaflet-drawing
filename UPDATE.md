@@ -1,3 +1,7 @@
+## rc-leaflet-drawing@1.0.2
+
+- update: dependencies.
+
 ## rc-leaflet-drawing@1.0.1
 
 - fix: reset prev options when `onLayerChange` is fired.

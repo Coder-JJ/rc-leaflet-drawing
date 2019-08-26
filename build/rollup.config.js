@@ -26,7 +26,7 @@ export default {
       'rc-leaflet': 'RCLeaflet'
     }
   },
-  external: ['react', 'react-dom', 'prop-types', 'leaflet', 'leaflet.pm', 'rc-leaflet'],
+  external: ['react', 'prop-types', 'leaflet', 'leaflet.pm', 'rc-leaflet'],
   plugins: [
     del({ targets: path.resolve(__dirname, '../dist/*') }),
     resolve(),

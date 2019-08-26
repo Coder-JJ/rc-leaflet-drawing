@@ -1,20 +1,17 @@
 {
   "name": "rc-leaflet-drawing",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React Map Drawing Component based on rc-leaflet",
   "keywords": [
     "typescript",
-    "ts",
     "react",
+    "map",
+    "component",
     "leaflet",
     "leaflet.pm",
     "react-leaflet",
     "rc-leaflet",
-    "map",
-    "component",
-    "react-component",
-    "draw",
-    "drawing"
+    "draw"
   ],
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -49,6 +46,7 @@
     "@types/leaflet": "^1.5.0",
     "@types/leaflet.pm": "^0.13.4",
     "@types/prop-types": "^15.7.1",
+    "leaflet": "^1.5.1",
     "leaflet.pm": "^2.1.0",
     "prop-types": "^15.7.2"
   },
