@@ -230,9 +230,12 @@ export default class Drawing extends Component<Props, State> {
   public constructor (props: Props, context: MapContextType) {
     super(props, context)
     this.state = { layers: [] }
-    const { lang, translation = {} } = props
+  }
+
+  public componentDidMount (): void {
+    const { lang, translation } = this.props
     const map = this.context.map as any
-    map.pm.setLang('rc-leaflet', translation, lang)
+    map.pm.setLang('rc-leaflet', translation || {}, lang)
     this.context.map.on('pm:create', this.onDrawLayer)
     this.enableMode()
   }

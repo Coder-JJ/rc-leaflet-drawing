@@ -1,6 +1,6 @@
 {
   "name": "rc-leaflet-drawing",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React Map Drawing Component based on rc-leaflet",
   "keywords": [
     "typescript",

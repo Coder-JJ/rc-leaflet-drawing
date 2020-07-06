@@ -1,3 +1,7 @@
+## rc-leaflet-drawing@1.0.3
+
+- fix: `this.context` in `constructor`.
+
 ## rc-leaflet-drawing@1.0.2
 
 - update: dependencies.

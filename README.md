@@ -2,7 +2,7 @@
 
 ## History Versions
 
-- [rc-leaflet-drawing Change Logs](https://github.com/Coder-JJ/rc-leaflet-drawing/blob/master/UPDATE.md)
+- [rc-leaflet-drawing CHANGELOG](https://github.com/Coder-JJ/rc-leaflet-drawing/blob/master/CHANGELOG.md)
 
 ## Docs
 
