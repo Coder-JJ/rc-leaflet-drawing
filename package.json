@@ -1,6 +1,6 @@
 {
   "name": "rc-leaflet-drawing",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React Map Drawing Component based on rc-leaflet",
   "keywords": [
     "typescript",
@@ -31,7 +31,7 @@
     "eslint": "eslint -c ./.eslintrc.json ./src/index.tsx",
     "umd": "rollup -c ./build/rollup.config.js",
     "esm": "gulp --gulpfile ./build/gulpfile.js",
-    "build": "npm run eslint & npm run umd & npm run esm"
+    "build": "npm run eslint && npm run umd && npm run esm"
   },
   "pre-commit": "eslint",
   "repository": {

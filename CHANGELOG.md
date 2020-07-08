@@ -1,3 +1,7 @@
+## rc-leaflet-drawing@1.0.4
+
+- fix: build script
+
 ## rc-leaflet-drawing@1.0.3
 
 - fix: `this.context` in `constructor`.
